@@ -28,9 +28,9 @@ The C++ version is compiled with the -03 optimization.
 
 | C++ (GCC 7.3.0) | JavaScript (Node 8.10.0) | Python 3.6.5        |
 |-----------------|:------------------------:| -------------------:|
-| real: 0m 3.053s | real: 0m 6.525s          | real    0m 4.225s   |
-| user: 0m 0.265s | user: 0m 4.612s          | user    0m 2.122s   |
-| sys:  0m 1.269s | sys:  0m 1.797s          | sys     0m 1.606s   |
+| real: 0m 1.808s | real: 0m 6.525s          | real    0m 4.225s   |
+| user: 0m 0.256s | user: 0m 4.612s          | user    0m 2.122s   |
+| sys:  0m 1.259s | sys:  0m 1.797s          | sys     0m 1.606s   |
 
 | Python (PyPy 5.10.0) | TBD                 | TBD                 |
 |----------------------|:-------------------:| -------------------:|
