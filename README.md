@@ -24,6 +24,8 @@ The C++ version is compiled with the -03 optimization.
 
 **All tests are run on a Ryzen 7 1700 at 3.6GHz.**
 
+**All tests are run on Ubuntu 18.04.**
+
 | C++ (GCC 7.3.0) | JavaScript (Node 8.10.0) | Python 3.6.5        |
 |-----------------|:------------------------:| -------------------:|
 | real: 0m 3.053s | real: 0m 6.525s          | real    0m 4.225s   |
