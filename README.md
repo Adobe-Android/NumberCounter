@@ -11,6 +11,8 @@ All benchmark times are measured with the unix time program which uses m for min
 
 The C++ version is compiled with the -02 optimization.
 
+**All tests are run on a Ryzen 7 1700 at 3.6GHz.**
+
 | C++             | JavaScript      | Python (on the way) |
 |-----------------|:---------------:| -------------------:|
 | real: 0m 3.014s | real: 0m 6.525s |                     |
