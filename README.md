@@ -13,8 +13,14 @@ The C++ version is compiled with the -02 optimization.
 
 **All tests are run on a Ryzen 7 1700 at 3.6GHz.**
 
-| C++             | JavaScript      | Python (on the way) |
-|-----------------|:---------------:| -------------------:|
-| real: 0m 3.014s | real: 0m 6.525s |                     |
-| user: 0m 0.299s | user: 0m 4.612s |                     |
-| sys:  0m 1.248s | sys:  0m 1.797s |                     |
+| C++ (GCC 7.3.0) | JavaScript (Node 8.10.0) | Python 3.6.5        |
+|-----------------|:------------------------:| -------------------:|
+| real: 0m 3.014s | real: 0m 6.525s          | real    0m 4.225s   |
+| user: 0m 0.299s | user: 0m 4.612s          | user    0m 2.122s   |
+| sys:  0m 1.248s | sys:  0m 1.797s          | sys     0m 1.606s   |
+
+| Python (PyPy 5.10.0) | TBD                 | TBD                 |
+|----------------------|:-------------------:| -------------------:|
+| real: 0m 1.771s      | TBD                 | TBD                 |
+| user: 0m 0.314s      | TBD                 | TBD                 |
+| sys:  0m 1.208s      | TBD                 | TBD                 |
