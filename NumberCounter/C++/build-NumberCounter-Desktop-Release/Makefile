@@ -14,7 +14,7 @@ CC            = gcc
 CXX           = g++
 DEFINES       = 
 CFLAGS        = -pipe -O2 -Wall -W -fPIC $(DEFINES)
-CXXFLAGS      = -pipe -O2 -std=gnu++1y -Wall -W -fPIC $(DEFINES)
+CXXFLAGS      = -pipe -O2 -O2 -std=gnu++1y -Wall -W -fPIC $(DEFINES)
 INCPATH       = -I../NumberCounter -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++
 QMAKE         = /usr/lib/qt5/bin/qmake
 DEL_FILE      = rm -f
@@ -35,7 +35,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = NumberCounter1.0.0
-DISTDIR = /home/vm/workspace/NumberCounter/C++/build-NumberCounter-Desktop-Release/.tmp/NumberCounter1.0.0
+DISTDIR = /home/vm/workspace/lang-benchmark/NumberCounter/C++/build-NumberCounter-Desktop-Release/.tmp/NumberCounter1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-O1
 LIBS          = $(SUBLIBS)  

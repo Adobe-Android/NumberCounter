@@ -1,5 +1,5 @@
 # NumberCounter
-Each program will be a simple loop counting to 1,000,000. 
+Each program will be a simple loop counting to 10,000,000. 
 
 More benchmarks on the way!
 
@@ -23,26 +23,29 @@ One of these things is not like the other. Real refers to actual elapsed time; U
 
 *Reference: https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1* 
 
-The C++ version is compiled with the -03 optimization.
+The C++ version is compiled with the -02 optimization.
 
 **All tests are run on a Ryzen 7 1700 at 3.6GHz.**
 
 **All tests are run on Ubuntu 18.04.**
 
-|       | C++ (GCC 7.3.0) | JavaScript (Node 8.10.0) |
+|       | C++ (GCC 7.3.0) | JavaScript (Node 10.3.0) |
 |-------|-----------------|:------------------------:|
-| real: | 0m 1.808s       | 0m 6.525s                |
-| user: | 0m 0.256s       | 0m 4.612s                |
-| sys:  | 0m 1.259s       | 0m 1.797s                |
+| real: | 0m 34.37s       | 1m 17.04s                |
+| user: | 0m 2.48s        | 1m 36.82s                |
+| sys:  | 0m 12.72s       | 0m 16.62s                |
+| cpu:  | 44%             | 147%                     |
 
 |       | C# (.NET Core 2.1.300) | Java (10.0.1) |
 |-------|------------------------|:-------------:|
-| real: | 0m 5.365s              | 0m 4.887s     |
-| user: | 0m 2.723s              | 0m 1.228s     |
-| sys:  | 0m 1.805s              | 0m 2.651s     |
+| real: | 0m 42.53s              | 0m 49.56s     |
+| user: | 0m 8.86s               | 0m 8.63s      |
+| sys:  | 0m 14.63s              | 0m 23.32s     |
+| cpu:  | 55%                    | 64%           |
 
 |       | Python (CPython 3.6.5) | Python (PyPy 5.10.0) | Python (Jython) |
 |-------|------------------------|:--------------------:|:---------------:|
-| real: | 0m 4.225s              | 0m 1.771s            | TBD             |
-| user: | 0m 2.122s              | 0m 0.314s            | TBD             |
-| sys:  | 0m 1.606s              | 0m 1.208s            | TBD             |
+| real: | 0m 58.66s              | 0m 34.58s            | TBD             |
+| user: | 0m 24.68s              | 0m 2.85s             | TBD             |
+| sys:  | 0m 16.95s              | 0m 12.38s            | TBD             |
+| cpu:  | 70%                    | 44%                  |                 |
