@@ -29,14 +29,20 @@ The C++ version is compiled with the -03 optimization.
 
 **All tests are run on Ubuntu 18.04.**
 
-| C++ (GCC 7.3.0) | JavaScript (Node 8.10.0) | Java (10.0.1)  |
-|-----------------|:------------------------:|:--------------:|
-| real: 0m 1.808s | real: 0m 6.525s          | real 0m 4.887s |
-| user: 0m 0.256s | user: 0m 4.612s          | user 0m 1.228s |
-| sys:  0m 1.259s | sys:  0m 1.797s          | sys  0m 2.651s |
+|       | C++ (GCC 7.3.0) | JavaScript (Node 8.10.0) |
+|-------|-----------------|:------------------------:|
+| real: | 0m 1.808s       | 0m 6.525s                |
+| user: | 0m 0.256s       | 0m 4.612s                |
+| sys:  | 0m 1.259s       | 0m 1.797s                |
 
-| Python (CPython 3.6.5) | Python (PyPy 5.10.0) | Python (Jython) |
-|------------------------|:--------------------:|:---------------:|
-| real:  0m 4.225s       | real: 0m 1.771s      | TBD             |
-| user: 0m 2.122s        | user: 0m 0.314s      | TBD             |
-| sys:  0m 1.606s        | sys:  0m 1.208s      | TBD             |
+|       | C# (.NET Core 2.1.300) | Java (10.0.1) |
+|-------|------------------------|:-------------:|
+| real: | 0m 5.365s              | 0m 4.887s     |
+| user: | 0m 2.723s              | 0m 1.228s     |
+| sys:  | 0m 1.805s              | 0m 2.651s     |
+
+|       | Python (CPython 3.6.5) | Python (PyPy 5.10.0) | Python (Jython) |
+|-------|------------------------|:--------------------:|:---------------:|
+| real: | 0m 4.225s              | 0m 1.771s            | TBD             |
+| user: | 0m 2.122s              | 0m 0.314s            | TBD             |
+| sys:  | 0m 1.606s              | 0m 1.208s            | TBD             |
