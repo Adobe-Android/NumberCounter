@@ -1,17 +1,20 @@
-# NumberCounter
-Each program will be a simple loop counting to 10,000,000. 
+# Lang-Benchmark
 
-More benchmarks on the way!
-
-## Why?
-I chose ten million as it was a large enough number to help separate the difference between each programming language implementation without being so large that any language took very long.
+### What is it?
+This is a repository where I (and possibly others) will be writing small programs and pushing the most basic programming constructs to compare a number of languages.
 
 I also think this is a good reference point even if it holds little value and doesn't do enough to serve as a real benchmark.
 
 ### Additional Notes:
-All benchmark times are measured with the unix time program which uses m for minutes and s for seconds.
 
-Real, User and Sys process time statistics:
+**All tests are run on Ubuntu 18.04.**
+
+**All tests are run on a Ryzen 7 1700 at 3.6GHz.**
+
+**The C++ version is compiled with the -02 optimization.**
+
+### How do I read this chart?
+All benchmark times are measured with the unix time program which uses m for minutes and s for seconds.
 
 One of these things is not like the other. Real refers to actual elapsed time; User and Sys refer to CPU time used only by the process.
 
@@ -23,11 +26,11 @@ One of these things is not like the other. Real refers to actual elapsed time; U
 
 *Reference: https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1* 
 
-The C++ version is compiled with the -02 optimization.
+## NumberCounter
+Each program will be a simple loop counting to 10,000,000.
 
-**All tests are run on a Ryzen 7 1700 at 3.6GHz.**
-
-**All tests are run on Ubuntu 18.04.**
+### Why?
+I chose ten million as it was a large enough number to help separate the difference between each programming language implementation without being so large that any language took very long.
 
 |       | C++ (GCC 7.3.0) |
 |-------|-----------------|
