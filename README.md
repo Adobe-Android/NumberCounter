@@ -48,13 +48,13 @@ I chose ten million as it was a large enough number to help separate the differe
 | cpu:     | 60%                    | 69%           | 54%         |
 | max mem: | 101 MB                 | 192 MB        | 7 MB        |
 
-|          | JavaScript (Node 10.3.0) | PHP (7.2.5) |
+|          | JavaScript (Node 10.4.0) | PHP (7.2.5) |
 |----------|--------------------------|:-----------:|
-| user:    | 1m 47.70s                | 0m 3.79s    |
-| sys:     | 0m 18.27s                | 0m 29.89s   |
-| total:   | 1m 29.47s                | 0m 47.842s  |
-| cpu:     | 140%                     | 70%         |
-| max mem: | 1618 MB                  | 16 MB       |
+| user:    | 1m 29.07s                | 0m 3.79s    |
+| sys:     | 0m 17.69s                | 0m 29.89s   |
+| total:   | 1m 27.24s                | 0m 47.842s  |
+| cpu:     | 122%                     | 70%         |
+| max mem: | 1530 MB                  | 16 MB       |
 
 |          | Python (CPython 3.6.5) | Python (PyPy 5.10.0) | Python (Jython) |
 |----------|------------------------|:--------------------:|:---------------:|
@@ -92,13 +92,13 @@ Strings are manipulated extremely often and this is a fantastic example with a l
 |          |                 | 9 sec	     | 3840 kb  |
 |          |                 | 10 sec	     | 4096 kb  |
 
-|          | JavaScript (Node 10.3.0) | exec.time.sec | str.size |
+|          | JavaScript (Node 10.4.0) | exec.time.sec | str.size |
 |----------|--------------------------|---------------|----------|
-| user:    | 2m 50.64s                | 0 sec	      | 256 kb   |
-| sys:     | 3m 8.95s                 | 1 sec		  | 512 kb   |
-| total:   | 3m 37.12                 | 5 sec		  | 768 kb   |
-| cpu:     | 165%                     | 11 sec		  | 1024 kb  |
-| max mem: | 130 MB                   | 18 sec	      | 1280 kb  |
+| user:    | 2m 52.49s                | 0 sec	      | 256 kb   |
+| sys:     | 3m 32.53s                | 1 sec		  | 512 kb   |
+| total:   | 3m 51.28                 | 5 sec		  | 768 kb   |
+| cpu:     | 166%                     | 11 sec		  | 1024 kb  |
+| max mem: | 134 MB                   | 18 sec	      | 1280 kb  |
 |          |                          | 27 sec	      | 1536 kb  |
 |          |                          | 38 sec	 	  | 1792 kb  |
 |          |                          | 51 sec	      | 2048 kb  |
