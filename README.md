@@ -71,7 +71,7 @@ If the original author would like to collaborate with me to update all or most o
 *Reference: https://raid6.com.au/~onlyjob/posts/arena/*
 
 ### Why?
-Strings are manipulated extremely often and this is a fantastic example with a lot of data and a long enough run-time to present more accurate results.
+Strings are manipulated extremely often and this is a fantastic example with a lot of data and a long enough run-time to present more accurate results. Unfortunately, Pypy doesn't work with Python 3 features and so it was omitted from this test. It may also be dropped in all other benchmarks until it supports Python 3.
 
 |          | C++ (GCC 7.3.0) | exec.time.sec | str.size |
 |----------|-----------------|---------------|----------|
@@ -111,3 +111,21 @@ Strings are manipulated extremely often and this is a fantastic example with a l
 |          |                          | 188 sec	      | 3840 kb  |
 |          |                          | 215 sec       | 4096 kb  |
 
+|          | Python (CPython 3.6.5) | exec.time.sec | str.size |
+|----------|------------------------|---------------|----------|
+| user:    | 6m 17.7s               | 1 sec	        | 256 kb   |
+| sys:     | 2m 1.45s               | 6 sec		    | 512 kb   |
+| total:   | 8m 19.26               | 14 sec	    | 768 kb   |
+| cpu:     | 99%                    | 27 sec	    | 1024 kb  |
+| max mem: | 25 MB                  | 44 sec	    | 1280 kb  |
+|          |                        | 64 sec	    | 1536 kb  |
+|          |                        | 88 sec	    | 1792 kb  |
+|          |                        | 117 sec	    | 2048 kb  |
+|          |                        | 149 sec	    | 2304 kb  |
+|          |                        | 186 sec	    | 2560 kb  |
+|          |                        | 227 sec	    | 2816 kb  |
+|          |                        | 272 sec	    | 3072 kb  |
+|          |                        | 322 sec	    | 3328 kb  |
+|          |                        | 375 sec	    | 3584 kb  |
+|          |                        | 433 sec	    | 3840 kb  |
+|          |                        | 495 sec       | 4096 kb  |
