@@ -11,14 +11,14 @@ I also think this is a good reference point even if it holds little value and do
 
 **All tests are run on a Ryzen 7 1700 at 3.6GHz.**
 
-**The C++ version is compiled with the -02 optimization.**
+**The C++ version is compiled with the -03 optimization.**
 
 ### How do I read this chart?
-All benchmark times are measured with the unix time program which uses m for minutes and s for seconds.
+All benchmark times are measured with the zsh time command.
 
-One of these things is not like the other. Real refers to actual elapsed time; User and Sys refer to CPU time used only by the process.
+Total refers to actual elapsed time; User and Sys refer to CPU time used only by the process.
 
-    Real is wall clock time - time from start to finish of the call. This is all time including time used by other processes and time the process spends blocked (for example if it is waiting for I/O to complete).
+    Total is wall clock time - time from start to finish of the call. This is all time including time used by other processes and time the process spends blocked (for example if it is waiting for I/O to complete).
 
     User is the amount of CPU time spent in user-mode code (outside the kernel) within the process. This is only actual CPU time used in executing the process. Other processes and time the process spends blocked do not count towards this.
 
@@ -32,30 +32,82 @@ Each program will be a simple loop counting to 10,000,000.
 ### Why?
 I chose ten million as it was a large enough number to help separate the difference between each programming language implementation without being so large that any language took very long.
 
-|       | C++ (GCC 7.3.0) |
-|-------|-----------------|
-| real: | 0m 34.37s       |
-| user: | 0m 2.48s        |
-| sys:  | 0m 12.72s       |
-| cpu:  | 44%             |
+|          | C++ (GCC 7.3.0) |
+|----------|-----------------|
+| user:    | 0m 2.59s        |
+| sys:     | 0m 12.46s       |
+| total:   | 0m 30.597       |
+| cpu:     | 49%             |
+| max mem: | 3 MB            |
 
-|       | C# (.NET Core 2.1.300) | Java (10.0.1) | Go (1.10.1) |
-|-------|------------------------|:-------------:|:-----------:|
-| real: | 0m 42.53s              | 0m 49.56s     | 0m 37.63s   |
-| user: | 0m 8.86s               | 0m 8.63s      | 0m 4.88s    |
-| sys:  | 0m 14.63s              | 0m 23.32s     | 0m 14.01s   |
-| cpu:  | 55%                    | 64%           | 50%         |
+|          | C# (.NET Core 2.1.300) | Java (10.0.1) | Go (1.10.1) |
+|----------|------------------------|:-------------:|:-----------:|
+| user:    | 0m 8.89s               | 0m 8.61s      | 0m 4.60s    |
+| sys:     | 0m 14.49s              | 0m 23.80s     | 0m 14.03s   |
+| total:   | 0m 38.919s             | 0m 46.361s    | 0m 33.895s  |
+| cpu:     | 60%                    | 69%           | 54%         |
+| max mem: | 101 MB                 | 192 MB        | 7 MB        |
 
-|       | JavaScript (Node 10.3.0) | PHP (7.2.5) |
-|-------|--------------------------|:-----------:|
-| real: | 1m 17.04s                | 0m 48.22s   |
-| user: | 1m 36.82s                | 0m 3.71s    |
-| sys:  | 0m 16.62s                | 0m 26.40s   |
-| cpu:  | 147%                     | 62%         |
+|          | JavaScript (Node 10.3.0) | PHP (7.2.5) |
+|----------|--------------------------|:-----------:|
+| user:    | 1m 47.70s                | 0m 3.79s    |
+| sys:     | 0m 18.27s                | 0m 29.89s   |
+| total:   | 1m 29.47s                | 0m 47.842s  |
+| cpu:     | 140%                     | 70%         |
+| max mem: | 1618 MB                  | 16 MB       |
 
-|       | Python (CPython 3.6.5) | Python (PyPy 5.10.0) | Python (Jython) |
-|-------|------------------------|:--------------------:|:---------------:|
-| real: | 0m 58.66s              | 0m 34.58s            | TBD             |
-| user: | 0m 24.68s              | 0m 2.85s             | TBD             |
-| sys:  | 0m 16.95s              | 0m 12.38s            | TBD             |
-| cpu:  | 70%                    | 44%                  |                 |
+|          | Python (CPython 3.6.5) | Python (PyPy 5.10.0) | Python (Jython) |
+|----------|------------------------|:--------------------:|:---------------:|
+| user:    | 0m 25.20s              | 0m 2.84s             | TBD             |
+| sys:     | 0m 17.12s              | 0m 12.63s            | TBD             |
+| total:   | 0m 55.777s             | 0m 31.325s           | TBD             |
+| cpu:     | 75%                    | 49%                  |                 |
+| max mem: | 9 MB                   | 61 MB                |                 |
+
+## Strbench
+I actually had a lot of trouble coming up with a string benchmark that ran long enough for a good comparison. I was lucky enough to find a fantastic one.
+If the original author would like to collaborate with me to update all or most of his old examples, I would be happy to.
+
+*Reference: https://raid6.com.au/~onlyjob/posts/arena/*
+
+### Why?
+Strings are manipulated extremely often and this is a fantastic example with a lot of data and a long enough run-time to present more accurate results.
+
+|          | C++ (GCC 7.3.0) | exec.time.sec | str.size |
+|----------|-----------------|---------------|----------|
+| user:    | 0m 9.82s        | 0 sec	     | 256 kb   |
+| sys:     | 0m 0.00s        | 1 sec		 | 512 kb   |
+| total:   | 0m 9.827        | 1 sec		 | 768 kb   |
+| cpu:     | 99%             | 1 sec		 | 1024 kb  |
+| max mem: | 10 MB           | 1 sec	     | 1280 kb  |
+|          |                 | 2 sec	     | 1536 kb  |
+|          |                 | 2 sec		 | 1792 kb  |
+|          |                 | 3 sec	     | 2048 kb  |
+|          |                 | 3 sec	     | 2304 kb  |
+|          |                 | 4 sec	     | 2560 kb  |
+|          |                 | 5 sec	     | 2816 kb  |
+|          |                 | 6 sec	     | 3072 kb  |
+|          |                 | 7 sec	     | 3328 kb  |
+|          |                 | 8 sec	     | 3584 kb  |
+|          |                 | 9 sec	     | 3840 kb  |
+|          |                 | 10 sec	     | 4096 kb  |
+
+|          | JavaScript (Node 10.3.0) | exec.time.sec | str.size |
+|----------|--------------------------|---------------|----------|
+| user:    | 2m 50.64s                | 0 sec	      | 256 kb   |
+| sys:     | 3m 8.95s                 | 1 sec		  | 512 kb   |
+| total:   | 3m 37.12                 | 5 sec		  | 768 kb   |
+| cpu:     | 165%                     | 11 sec		  | 1024 kb  |
+| max mem: | 130 MB                   | 18 sec	      | 1280 kb  |
+|          |                          | 27 sec	      | 1536 kb  |
+|          |                          | 38 sec	 	  | 1792 kb  |
+|          |                          | 51 sec	      | 2048 kb  |
+|          |                          | 65 sec	      | 2304 kb  |
+|          |                          | 81 sec	      | 2560 kb  |
+|          |                          | 99 sec	      | 2816 kb  |
+|          |                          | 118 sec	      | 3072 kb  |
+|          |                          | 140 sec	      | 3328 kb  |
+|          |                          | 163 sec	      | 3584 kb  |
+|          |                          | 188 sec	      | 3840 kb  |
+|          |                          | 215 sec       | 4096 kb  |
+

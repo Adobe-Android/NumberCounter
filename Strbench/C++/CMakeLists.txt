@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.0.0)
+project(Strbench VERSION 0.1.0)
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_FLAGS_DEBUG "-g")
+set(CMAKE_CXX_FLAGS_RELEASE "-O3")
+add_executable(Strbench main.cpp)
