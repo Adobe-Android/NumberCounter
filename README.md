@@ -71,7 +71,7 @@ If the original author would like to collaborate with me to update all or most o
 *Reference: https://raid6.com.au/~onlyjob/posts/arena/*
 
 ### Why?
-Strings are manipulated extremely often and this is a fantastic example with a lot of data and a long enough run-time to present more accurate results. Unfortunately, Pypy doesn't work with Python 3 features and so it was omitted from this test. It may also be dropped in all other benchmarks until it supports Python 3.
+Strings are manipulated extremely often and this is a fantastic example with a lot of data and a long enough run-time to present more accurate results. Unfortunately, Pypy doesn't work with Python 3 features and so it was omitted from this test. It may also be dropped in all other benchmarks until it supports Python 3. I planned to redeem Java in this benchmark from its poor fate in the older reference benchmark by running it on the latest JVM. Unfortunately, this did not happen. I may look into optimizations in the future, but I would certainly appreciate suggestions.
 
 |          | C++ (GCC 7.3.0) | exec.time.sec | str.size |
 |----------|-----------------|---------------|----------|
@@ -129,3 +129,22 @@ Strings are manipulated extremely often and this is a fantastic example with a l
 |          |                        | 375 sec	    | 3584 kb  |
 |          |                        | 433 sec	    | 3840 kb  |
 |          |                        | 495 sec       | 4096 kb  |
+
+|          | Java (10.0.1) | exec.time.sec | str.size |
+|----------|---------------|---------------|----------|
+| user:    | 27m 17.7s     | 5 sec	       | 256 kb   |
+| sys:     | 0m 19.54s     | 22 sec		   | 512 kb   |
+| total:   | 22m 35.81     | 51 sec	       | 768 kb   |
+| cpu:     | 123%          | 91 sec	       | 1024 kb  |
+| max mem: | 593 MB        | 143 sec	   | 1280 kb  |
+|          |               | 207 sec	   | 1536 kb  |
+|          |               | 279 sec	   | 1792 kb  |
+|          |               | 355 sec	   | 2048 kb  |
+|          |               | 442 sec	   | 2304 kb  |
+|          |               | 540 sec	   | 2560 kb  |
+|          |               | 647 sec	   | 2816 kb  |
+|          |               | 766 sec	   | 3072 kb  |
+|          |               | 895 sec	   | 3328 kb  |
+|          |               | 1035 sec	   | 3584 kb  |
+|          |               | 1185 sec	   | 3840 kb  |
+|          |               | 1345 sec      | 4096 kb  |
