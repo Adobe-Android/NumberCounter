@@ -92,6 +92,25 @@ Strings are manipulated extremely often and this is a fantastic example with a l
 |          |                 | 9 sec	     | 3840 kb  |
 |          |                 | 10 sec	     | 4096 kb  |
 
+|          | Java (10.0.1) | exec.time.sec | str.size |
+|----------|---------------|---------------|----------|
+| user:    | 0m 48.57s     | 0 sec	       | 256 kb   |
+| sys:     | 0m 0.04s      | 0 sec		   | 512 kb   |
+| total:   | 0m 48.390     | 1 sec	       | 768 kb   |
+| cpu:     | 100%          | 3 sec	       | 1024 kb  |
+| max mem: | 44 MB         | 4 sec	       | 1280 kb  |
+|          |               | 6 sec	       | 1536 kb  |
+|          |               | 9 sec	       | 1792 kb  |
+|          |               | 12 sec	       | 2048 kb  |
+|          |               | 15 sec	       | 2304 kb  |
+|          |               | 18 sec	       | 2560 kb  |
+|          |               | 22 sec	       | 2816 kb  |
+|          |               | 26 sec	       | 3072 kb  |
+|          |               | 31 sec	       | 3328 kb  |
+|          |               | 36 sec	       | 3584 kb  |
+|          |               | 42 sec	       | 3840 kb  |
+|          |               | 47 sec        | 4096 kb  |
+
 |          | JavaScript (Node 10.4.0) | exec.time.sec | str.size |
 |----------|--------------------------|---------------|----------|
 | user:    | 2m 52.49s                | 0 sec	      | 256 kb   |
@@ -129,22 +148,3 @@ Strings are manipulated extremely often and this is a fantastic example with a l
 |          |                        | 375 sec	    | 3584 kb  |
 |          |                        | 433 sec	    | 3840 kb  |
 |          |                        | 495 sec       | 4096 kb  |
-
-|          | Java (10.0.1) | exec.time.sec | str.size |
-|----------|---------------|---------------|----------|
-| user:    | 27m 17.7s     | 5 sec	       | 256 kb   |
-| sys:     | 0m 19.54s     | 22 sec		   | 512 kb   |
-| total:   | 22m 35.81     | 51 sec	       | 768 kb   |
-| cpu:     | 123%          | 91 sec	       | 1024 kb  |
-| max mem: | 593 MB        | 143 sec	   | 1280 kb  |
-|          |               | 207 sec	   | 1536 kb  |
-|          |               | 279 sec	   | 1792 kb  |
-|          |               | 355 sec	   | 2048 kb  |
-|          |               | 442 sec	   | 2304 kb  |
-|          |               | 540 sec	   | 2560 kb  |
-|          |               | 647 sec	   | 2816 kb  |
-|          |               | 766 sec	   | 3072 kb  |
-|          |               | 895 sec	   | 3328 kb  |
-|          |               | 1035 sec	   | 3584 kb  |
-|          |               | 1185 sec	   | 3840 kb  |
-|          |               | 1345 sec      | 4096 kb  |
