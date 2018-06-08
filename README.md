@@ -11,8 +11,6 @@ I also think this is a good reference point even if it holds little value and do
 
 **All tests are run on a Ryzen 7 1700 at 3.6GHz.**
 
-**The C++ version is compiled with the -03 optimization.**
-
 ### How do I read this chart?
 All benchmark times are measured with the zsh time command.
 
@@ -31,13 +29,14 @@ Each program will be a simple loop counting to 10,000,000.
 
 ### Why?
 I chose ten million as it was a large enough number to help separate the difference between each programming language implementation without being so large that any language took very long.
+**The C++ version is compiled with the -0s optimization.**
 
 |          | C++ (GCC 7.3.0) |
 |----------|-----------------|
-| user:    | 0m 2.59s        |
-| sys:     | 0m 12.46s       |
+| user:    | 0m 2.61s        |
+| sys:     | 0m 11.87s       |
 | total:   | 0m 30.597       |
-| cpu:     | 49%             |
+| cpu:     | 48%             |
 | max mem: | 3 MB            |
 
 |          | C# (.NET Core 2.1.300) | Java (10.0.1) | Go (1.10.1) |
@@ -71,25 +70,26 @@ If the original author would like to collaborate with me to update all or most o
 *Reference: https://raid6.com.au/~onlyjob/posts/arena/*
 
 ### Why?
-Strings are manipulated extremely often and this is a fantastic example with a lot of data and a long enough run-time to present more accurate results. Unfortunately, Pypy doesn't work with Python 3 features and so it was omitted from this test. It may also be dropped in all other benchmarks until it supports Python 3. I planned to redeem Java in this benchmark from its poor fate in the older reference benchmark by running it on the latest JVM. Unfortunately, this did not happen. I may look into optimizations in the future, but I would certainly appreciate suggestions.
+Strings are manipulated extremely often and this is a fantastic example with a lot of data and a long enough run-time to present more accurate results. Unfortunately, Pypy doesn't work with Python 3 features and so it was omitted from this test. It may also be dropped in all other benchmarks until it supports Python 3. I opted to use StringBuilder to speed up the Java implementation.
+**The C++ version is compiled with the -0s optimization.**
 
 |          | C++ (GCC 7.3.0) | exec.time.sec | str.size |
 |----------|-----------------|---------------|----------|
-| user:    | 0m 9.82s        | 0 sec	     | 256 kb   |
-| sys:     | 0m 0.00s        | 1 sec		 | 512 kb   |
-| total:   | 0m 9.827        | 1 sec		 | 768 kb   |
-| cpu:     | 99%             | 1 sec		 | 1024 kb  |
+| user:    | 0m 9.78s        | 0 sec	     | 256 kb   |
+| sys:     | 0m 0.00s        | 0 sec		 | 512 kb   |
+| total:   | 0m 9.787        | 0 sec		 | 768 kb   |
+| cpu:     | 99%             | 0 sec		 | 1024 kb  |
 | max mem: | 10 MB           | 1 sec	     | 1280 kb  |
-|          |                 | 2 sec	     | 1536 kb  |
+|          |                 | 1 sec	     | 1536 kb  |
 |          |                 | 2 sec		 | 1792 kb  |
-|          |                 | 3 sec	     | 2048 kb  |
+|          |                 | 2 sec	     | 2048 kb  |
 |          |                 | 3 sec	     | 2304 kb  |
 |          |                 | 4 sec	     | 2560 kb  |
-|          |                 | 5 sec	     | 2816 kb  |
-|          |                 | 6 sec	     | 3072 kb  |
-|          |                 | 7 sec	     | 3328 kb  |
-|          |                 | 8 sec	     | 3584 kb  |
-|          |                 | 9 sec	     | 3840 kb  |
+|          |                 | 4 sec	     | 2816 kb  |
+|          |                 | 5 sec	     | 3072 kb  |
+|          |                 | 6 sec	     | 3328 kb  |
+|          |                 | 7 sec	     | 3584 kb  |
+|          |                 | 8 sec	     | 3840 kb  |
 |          |                 | 10 sec	     | 4096 kb  |
 
 |          | Java (10.0.1) | exec.time.sec | str.size |
@@ -148,3 +148,21 @@ Strings are manipulated extremely often and this is a fantastic example with a l
 |          |                        | 375 sec	    | 3584 kb  |
 |          |                        | 433 sec	    | 3840 kb  |
 |          |                        | 495 sec       | 4096 kb  |
+
+## SumCalc
+This is a program that calculates all values divisible by 3 or 5 that are less than 1 million. If they are, it then adds them to a total number and outputs the result.
+I got inspiration for this test at project euler.
+
+*Reference: https://projecteuler.net/*
+
+### Why?
+I thought this would be a good variation on my NumberCounter test with more real logic happening. I also felt that the benchmarks were severely lacking some mathematical computation and it presents some fun optimization opportunities.
+**The C++ version is compiled with the -0s optimization.**
+
+|          | C++ (GCC 7.3.0) |
+|----------|-----------------|
+| user:    | 0m 0.17s        |
+| sys:     | 0m 0.58s        |
+| total:   | 0m 1.679        |
+| cpu:     | 44%             |
+| max mem: | 4 MB            |

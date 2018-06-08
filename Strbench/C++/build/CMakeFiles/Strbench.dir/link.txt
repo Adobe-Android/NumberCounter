@@ -1,1 +1,1 @@
-/usr/bin/c++  -O3  -rdynamic CMakeFiles/Strbench.dir/main.cpp.o  -o Strbench 
+/usr/bin/c++  -Wall -Wextra -Os  -rdynamic CMakeFiles/Strbench.dir/main.cpp.o  -o Strbench 
