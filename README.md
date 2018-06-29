@@ -55,13 +55,13 @@ I chose ten million as it was a large enough number to help separate the differe
 | cpu:     | 122%                     | 70%         |
 | max mem: | 1530 MB                  | 16 MB       |
 
-|          | Python (CPython 3.6.5) | Python (PyPy 5.10.0) | Python (Jython) |
-|----------|------------------------|:--------------------:|:---------------:|
-| user:    | 0m 25.20s              | 0m 2.84s             | TBD             |
-| sys:     | 0m 17.12s              | 0m 12.63s            | TBD             |
-| total:   | 0m 55.777s             | 0m 31.325s           | TBD             |
-| cpu:     | 75%                    | 49%                  |                 |
-| max mem: | 9 MB                   | 61 MB                |                 |
+|          | Python (CPython 3.6.5) | Python (PyPy 5.10.0) |
+|----------|------------------------|:--------------------:|
+| user:    | 0m 25.20s              | 0m 2.84s             |
+| sys:     | 0m 17.12s              | 0m 12.63s            |
+| total:   | 0m 55.777s             | 0m 31.325s           |
+| cpu:     | 75%                    | 49%                  |
+| max mem: | 9 MB                   | 61 MB                |
 
 ## Strbench
 I actually had a lot of trouble coming up with a string benchmark that ran long enough for a good comparison. I was lucky enough to find a fantastic one.
@@ -70,7 +70,7 @@ If the original author would like to collaborate with me to update all or most o
 *Reference: https://raid6.com.au/~onlyjob/posts/arena/*
 
 ### Why?
-Strings are manipulated extremely often and this is a fantastic example with a lot of data and a long enough run-time to present more accurate results. Unfortunately, Pypy doesn't work with Python 3 features and so it was omitted from this test. It may also be dropped in all other benchmarks until it supports Python 3. I opted to use StringBuilder to speed up the Java implementation.
+Strings are manipulated extremely often and this is a fantastic example with a lot of data and a long enough run-time to present more accurate results. Pypy benchmarks can be expected in the future. I also opted to use StringBuilder to speed up the Java implementation.
 **The C++ version is compiled with the -0s optimization.**
 
 |          | C++ (GCC 7.3.0) | exec.time.sec | str.size |
@@ -166,3 +166,6 @@ I thought this would be a good variation on my NumberCounter test with more real
 | total:   | 0m 1.679        |
 | cpu:     | 44%             |
 | max mem: | 4 MB            |
+
+## DataStruct
+A collection of small data stucture based benchmarks. More coming soon.
