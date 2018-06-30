@@ -168,4 +168,12 @@ I thought this would be a good variation on my NumberCounter test with more real
 | max mem: | 4 MB            |
 
 ## DataStruct
-A collection of small data stucture based benchmarks. More coming soon.
+A collection of small data stucture based benchmarks. More coming soon. Benchmarks below are only filler for now.
+
+|          | ArrayList (Java 10.0.1) | Array (Java 10.0.1) |
+|----------|-------------------------|:-------------------:|
+| user:    | 0m 0.12s                | 0m 0.12s            |
+| sys:     | 0m 0.03s                | 0m 0.12s            |
+| total:   | 0m 0.110                | 0m 0.12s            |
+| cpu:     | ?%                      | ?%                  |
+| max mem: | ? MB                    | ? MB                |
