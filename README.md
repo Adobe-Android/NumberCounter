@@ -174,7 +174,7 @@ I thought this would be a good variation on my NumberCounter test with more real
 ## DataStruct
 A collection of small data stucture based benchmarks. More coming soon. Benchmarks below are only filler for now. It's yet to be determined whether this benchmark will stick around as its usefulness is doubtful.
 
-<h1 style="text-align: center;">Java (10.0.1)</h1>
+### Java (10.0.1)
 
 |          | ArrayList  | Array    |
 |----------|------------|:--------:|
