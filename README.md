@@ -3,24 +3,22 @@
 ### What is it?
 This is a repository where I (and possibly others) will be writing small programs and pushing the most basic programming constructs to compare a number of languages.
 
-I also think this is a good reference point even if it holds little value and doesn't do enough to serve as a real benchmark.
+I think this is a good reference point even if it holds little practical value and doesn't do enough to serve as a real benchmark.
 
-### Additional Notes:
-
-**All tests are run on Ubuntu 18.04.**
-
-**All tests are run on a Ryzen 7 1700 at 3.6GHz.**
+### Hardware/OS:
+- All tests are run on an **AMD Ryzen 7 1700 at 3.6GHz.**
+- The OS is **Ubuntu 18.04.**
 
 ### How do I read this chart?
 All benchmark times are measured with the zsh time command.
 
-Total refers to actual elapsed time; User and Sys refer to CPU time used only by the process.
+I chose this version for its added capabilities and used it across all tests.
 
-    Total is wall clock time - time from start to finish of the call. This is all time including time used by other processes and time the process spends blocked (for example if it is waiting for I/O to complete).
+- Total is wall clock time - time from start to finish of the call. This is all time including time used by other processes and time the process spends blocked (for example if it is waiting for I/O to complete).
 
-    User is the amount of CPU time spent in user-mode code (outside the kernel) within the process. This is only actual CPU time used in executing the process. Other processes and time the process spends blocked do not count towards this.
+- User is the amount of CPU time spent in user-mode code (outside the kernel) within the process. This is only actual CPU time used in executing the process. Other processes and time the process spends blocked do not count towards this.
 
-    Sys is the amount of CPU time spent in the kernel within the process. This means executing CPU time spent in system calls within the kernel, as opposed to library code, which is still running in user-space. Like 'user', this is only CPU time used by the process. See below for a brief description of kernel mode (also known as 'supervisor' mode) and the system call mechanism.
+- Sys is the amount of CPU time spent in the kernel within the process. This means executing CPU time spent in system calls within the kernel, as opposed to library code, which is still running in user-space. Like 'user', this is only CPU time used by the process. See below for a brief description of kernel mode (also known as 'supervisor' mode) and the system call mechanism.
 
 *Reference: https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1* 
 
@@ -28,12 +26,13 @@ Total refers to actual elapsed time; User and Sys refer to CPU time used only by
 Each program will be a simple loop counting to 10,000,000.
 
 ### Why?
-I chose ten million as it was a large enough number to help separate the difference between each programming language implementation without being so large that any language took very long.
+I chose ten million as it was a large enough number to help separate the difference between each programming language implementation without being so large that any one language took very long.
+
 **The C++ version is compiled with the -0s optimization.**
 
-|          | C++ (GCC 7.3.0) |
-|----------|-----------------|
-| user:    | 0m 2.61s        |
+|          | C++ (GCC 7.3.0) | Rust (1.27.0) |
+|----------|-----------------|:-------------:|
+| user:    | 0m 2.61s        | More coming soon!
 | sys:     | 0m 11.87s       |
 | total:   | 0m 30.597       |
 | cpu:     | 48%             |
@@ -63,6 +62,9 @@ I chose ten million as it was a large enough number to help separate the differe
 | cpu:     | 75%                    | 49%                  |
 | max mem: | 9 MB                   | 61 MB                |
 
+### Additional Notes:
+The Pypy results need to be updated most of all. Unfortunately, getting a modern version of Pypy3 on Ubuntu has been more of an annoyance than expected. I'll determine what the best approach should be. PHP may be removed in the future as it never really stood out in benchmarks.
+
 ## Strbench
 I actually had a lot of trouble coming up with a string benchmark that ran long enough for a good comparison. I was lucky enough to find a fantastic one.
 If the original author would like to collaborate with me to update all or most of his old examples, I would be happy to.
@@ -71,6 +73,7 @@ If the original author would like to collaborate with me to update all or most o
 
 ### Why?
 Strings are manipulated extremely often and this is a fantastic example with a lot of data and a long enough run-time to present more accurate results. Pypy benchmarks can be expected in the future. I also opted to use StringBuilder to speed up the Java implementation.
+
 **The C++ version is compiled with the -0s optimization.**
 
 |          | C++ (GCC 7.3.0) | exec.time.sec | str.size |
@@ -157,6 +160,7 @@ I got inspiration for this test at project euler.
 
 ### Why?
 I thought this would be a good variation on my NumberCounter test with more real logic happening. I also felt that the benchmarks were severely lacking some mathematical computation and it presents some fun optimization opportunities.
+
 **The C++ version is compiled with the -0s optimization.**
 
 |          | C++ (GCC 7.3.0) |
@@ -168,12 +172,14 @@ I thought this would be a good variation on my NumberCounter test with more real
 | max mem: | 4 MB            |
 
 ## DataStruct
-A collection of small data stucture based benchmarks. More coming soon. Benchmarks below are only filler for now.
+A collection of small data stucture based benchmarks. More coming soon. Benchmarks below are only filler for now. It's yet to be determined whether this benchmark will stick around as its usefulness is doubtful.
 
-|          | ArrayList (Java 10.0.1) | Array (Java 10.0.1) |
-|----------|-------------------------|:-------------------:|
-| user:    | 0m 0.12s                | 0m 0.12s            |
-| sys:     | 0m 0.03s                | 0m 0.12s            |
-| total:   | 0m 0.110                | 0m 0.12s            |
-| cpu:     | ?%                      | ?%                  |
-| max mem: | ? MB                    | ? MB                |
+### Java (10.0.1)
+
+|          | ArrayList  | Array    |
+|----------|------------|:--------:|
+| user:    | 0m 0.12s   | 0m 0.12s |
+| sys:     | 0m 0.03s   | 0m 0.12s |
+| total:   | 0m 0.110   | 0m 0.12s |
+| cpu:     | ?%         | ?%       |
+| max mem: | ? MB       | ? MB     |
