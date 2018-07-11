@@ -172,7 +172,7 @@ I thought this would be a good variation on my NumberCounter test with more real
 | max mem: | 4 MB            |
 
 ## DataStruct
-A collection of small data stucture based benchmarks. These data structures are being tested at extremely large sizes to help separate the differences between them. You won't be able to see the difference between something like an Array and an ArrayList in much smaller programs. More coming soon. 
+A collection of small data stucture based benchmarks. These data structures are being tested at extremely large sizes to help separate the differences between them. You won't be able to see the difference between something like an Array and an ArrayList in much smaller programs. More coming soon (C++ Arrays and Vectors sound good). 
 
 ### Java (10.0.1)
 
