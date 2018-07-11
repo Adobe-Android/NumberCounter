@@ -1,7 +1,8 @@
 public class arr {
     public static void main(String[] args) {
-        int[] intArray = new int[100];
-        for (int i = 0; i < 100; i++) {
+        int loopNum = 10000000;
+        int[] intArray = new int[loopNum];
+        for (int i = 0; i < loopNum; i++) {
             System.out.println(i);
             intArray[i] = 1;
         }

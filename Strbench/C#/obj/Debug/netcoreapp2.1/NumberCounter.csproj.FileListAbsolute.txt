@@ -1,0 +1,11 @@
+/home/vm/workspace/lang-benchmark/NumberCounter/C#/bin/Debug/netcoreapp2.1/NumberCounter.deps.json
+/home/vm/workspace/lang-benchmark/NumberCounter/C#/bin/Debug/netcoreapp2.1/NumberCounter.runtimeconfig.json
+/home/vm/workspace/lang-benchmark/NumberCounter/C#/bin/Debug/netcoreapp2.1/NumberCounter.runtimeconfig.dev.json
+/home/vm/workspace/lang-benchmark/NumberCounter/C#/bin/Debug/netcoreapp2.1/NumberCounter.dll
+/home/vm/workspace/lang-benchmark/NumberCounter/C#/bin/Debug/netcoreapp2.1/NumberCounter.pdb
+/home/vm/workspace/lang-benchmark/NumberCounter/C#/obj/Debug/netcoreapp2.1/NumberCounter.csprojAssemblyReference.cache
+/home/vm/workspace/lang-benchmark/NumberCounter/C#/obj/Debug/netcoreapp2.1/NumberCounter.csproj.CoreCompileInputs.cache
+/home/vm/workspace/lang-benchmark/NumberCounter/C#/obj/Debug/netcoreapp2.1/NumberCounter.AssemblyInfoInputs.cache
+/home/vm/workspace/lang-benchmark/NumberCounter/C#/obj/Debug/netcoreapp2.1/NumberCounter.AssemblyInfo.cs
+/home/vm/workspace/lang-benchmark/NumberCounter/C#/obj/Debug/netcoreapp2.1/NumberCounter.dll
+/home/vm/workspace/lang-benchmark/NumberCounter/C#/obj/Debug/netcoreapp2.1/NumberCounter.pdb

@@ -32,19 +32,19 @@ I chose ten million as it was a large enough number to help separate the differe
 
 |          | C++ (GCC 7.3.0) | Rust (1.27.0) |
 |----------|-----------------|:-------------:|
-| user:    | 0m 2.61s        | More coming soon!
-| sys:     | 0m 11.87s       |
-| total:   | 0m 30.597       |
-| cpu:     | 48%             |
-| max mem: | 3 MB            |
+| user:    | 0m 2.61s        | 0m 3.86s      |
+| sys:     | 0m 11.87s       | 0m 12.14s     |
+| total:   | 0m 30.597       | 0m 30.785     |
+| cpu:     | 48%             | 51%           |
+| max mem: | 3 MB            | 3 MB          |
 
-|          | C# (.NET Core 2.1.300) | Java (10.0.1) | Go (1.10.1) |
+|          | C# (.NET Core 2.1.302) | Java (10.0.1) | Go (1.10.1) |
 |----------|------------------------|:-------------:|:-----------:|
-| user:    | 0m 8.89s               | 0m 8.61s      | 0m 4.60s    |
-| sys:     | 0m 14.49s              | 0m 23.80s     | 0m 14.03s   |
-| total:   | 0m 38.919s             | 0m 46.361s    | 0m 33.895s  |
-| cpu:     | 60%                    | 69%           | 54%         |
-| max mem: | 101 MB                 | 192 MB        | 7 MB        |
+| user:    | 0m 8.77s               | 0m 8.61s      | 0m 4.60s    |
+| sys:     | 0m 14.46s              | 0m 23.80s     | 0m 14.03s   |
+| total:   | 0m 37.268s             | 0m 46.361s    | 0m 33.895s  |
+| cpu:     | 62%                    | 69%           | 54%         |
+| max mem: | 100 MB                 | 192 MB        | 7 MB        |
 
 |          | JavaScript (Node 10.4.0) | PHP (7.2.5) |
 |----------|--------------------------|:-----------:|
@@ -54,16 +54,16 @@ I chose ten million as it was a large enough number to help separate the differe
 | cpu:     | 122%                     | 70%         |
 | max mem: | 1530 MB                  | 16 MB       |
 
-|          | Python (CPython 3.6.5) | Python (PyPy 5.10.0) |
-|----------|------------------------|:--------------------:|
-| user:    | 0m 25.20s              | 0m 2.84s             |
-| sys:     | 0m 17.12s              | 0m 12.63s            |
-| total:   | 0m 55.777s             | 0m 31.325s           |
-| cpu:     | 75%                    | 49%                  |
-| max mem: | 9 MB                   | 61 MB                |
+|          | Python (CPython 3.6.5) | Python (PyPy3 5.8.0-beta0) |
+|----------|------------------------|:--------------------------:|
+| user:    | 0m 25.20s              | 0m 11.89s                  |
+| sys:     | 0m 17.12s              | 0m 15.07s                  |
+| total:   | 0m 55.777s             | 0m 41.101s                 |
+| cpu:     | 75%                    | 65%                        |
+| max mem: | 9 MB                   | 61 MB                      |
 
 ### Additional Notes:
-The Pypy results need to be updated most of all. Unfortunately, getting a modern version of Pypy3 on Ubuntu has been more of an annoyance than expected. I'll determine what the best approach should be. PHP may be removed in the future as it never really stood out in benchmarks.
+The benchmarks have been updated to the latest version of PyPy3 I can currently get on Ubuntu 18.04 (through snap packages). Unfortunately, getting a modern version of Pypy3 on Ubuntu has been more of an annoyance than expected. I'll determine what the best approach should be. PHP may be removed in the future as it never really stood out in benchmarks.
 
 ## Strbench
 I actually had a lot of trouble coming up with a string benchmark that ran long enough for a good comparison. I was lucky enough to find a fantastic one.
@@ -172,14 +172,14 @@ I thought this would be a good variation on my NumberCounter test with more real
 | max mem: | 4 MB            |
 
 ## DataStruct
-A collection of small data stucture based benchmarks. More coming soon. Benchmarks below are only filler for now. It's yet to be determined whether this benchmark will stick around as its usefulness is doubtful.
+A collection of small data stucture based benchmarks. These data structures are being tested at extremely large sizes to help separate the differences between them. You won't be able to see the difference between something like an Array and an ArrayList in much smaller programs. More coming soon. 
 
 ### Java (10.0.1)
 
-|          | ArrayList  | Array    |
-|----------|------------|:--------:|
-| user:    | 0m 0.12s   | 0m 0.12s |
-| sys:     | 0m 0.03s   | 0m 0.12s |
-| total:   | 0m 0.110   | 0m 0.12s |
-| cpu:     | ?%         | ?%       |
-| max mem: | ? MB       | ? MB     |
+|          | ArrayList  | Array      |
+|----------|------------|:----------:|
+| user:    | 0m 16.72s  | 0m 7.82s   |
+| sys:     | 0m 22.16s  | 0m 22.85s  |
+| total:   | 0m 34.528  | 0m 34.295s |
+| cpu:     | 112%       | 89%        |
+| max mem: | 991 MB     | 230 MB     |
