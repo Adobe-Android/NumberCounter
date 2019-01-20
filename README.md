@@ -9,7 +9,7 @@ I think this is a good reference point even if it holds little practical value a
 - All tests are run on an **Intel® Core™ i5-4200U at 1.60GHz.**
 - The OS is **Fedora 29.**
 - C and C++ code is compiled using the **-0s optimization.**
-- Rust code is compiled using **cargo build --release.**
+- Rust code (*coming soon*) is compiled using **cargo build --release.**
 
 ### How do I read this chart?
 All benchmark times are measured with the GNU time command.
@@ -35,43 +35,43 @@ If the original author would like to collaborate with me to update all or most o
 ### Why?
 Strings are manipulated extremely often and this is a fantastic example with a lot of data and a long enough run-time to present more accurate results. I opted to use StringBuilder to speed up the Java implementation and will do the same for the upcoming C# implementation as strings are immutable in both languages.
 
-|          | C++ (GCC 7.3.0) | exec.time.sec | str.size |
+|          | C++ (GCC 8.2.1) | exec.time.sec | str.size |
 |----------|-----------------|---------------|----------|
-| user:    | 0m 9.78s        | 0 sec	     | 256 kb   |
+| user:    | 0m 27.31s       | 0 sec	     | 256 kb   |
 | sys:     | 0m 0.00s        | 0 sec		 | 512 kb   |
-| total:   | 0m 9.787        | 0 sec		 | 768 kb   |
-| cpu:     | 99%             | 0 sec		 | 1024 kb  |
-| max mem: | 10 MB           | 1 sec	     | 1280 kb  |
-|          |                 | 1 sec	     | 1536 kb  |
-|          |                 | 2 sec		 | 1792 kb  |
-|          |                 | 2 sec	     | 2048 kb  |
-|          |                 | 3 sec	     | 2304 kb  |
-|          |                 | 4 sec	     | 2560 kb  |
-|          |                 | 4 sec	     | 2816 kb  |
-|          |                 | 5 sec	     | 3072 kb  |
-|          |                 | 6 sec	     | 3328 kb  |
-|          |                 | 7 sec	     | 3584 kb  |
-|          |                 | 8 sec	     | 3840 kb  |
-|          |                 | 10 sec	     | 4096 kb  |
+| total:   | 0m 27.53        | 0 sec		 | 768 kb   |
+| cpu:     | 99%             | 1 sec		 | 1024 kb  |
+| max mem: | 10752 KB        | 1 sec	     | 1280 kb  |
+|          |                 | 2 sec	     | 1536 kb  |
+|          |                 | 3 sec		 | 1792 kb  |
+|          |                 | 4 sec	     | 2048 kb  |
+|          |                 | 5 sec	     | 2304 kb  |
+|          |                 | 7 sec	     | 2560 kb  |
+|          |                 | 9 sec	     | 2816 kb  |
+|          |                 | 11 sec	     | 3072 kb  |
+|          |                 | 14 sec	     | 3328 kb  |
+|          |                 | 18 sec	     | 3584 kb  |
+|          |                 | 22 sec	     | 3840 kb  |
+|          |                 | 27 sec	     | 4096 kb  |
 
-|          | Java (10.0.1) | exec.time.sec | str.size |
+|          | Java (openjdk-11.0.1) | exec.time.sec | str.size |
 |----------|---------------|---------------|----------|
-| user:    | 0m 48.57s     | 0 sec	       | 256 kb   |
-| sys:     | 0m 0.04s      | 0 sec		   | 512 kb   |
-| total:   | 0m 48.390     | 1 sec	       | 768 kb   |
-| cpu:     | 100%          | 3 sec	       | 1024 kb  |
-| max mem: | 44 MB         | 4 sec	       | 1280 kb  |
-|          |               | 6 sec	       | 1536 kb  |
-|          |               | 9 sec	       | 1792 kb  |
-|          |               | 12 sec	       | 2048 kb  |
-|          |               | 15 sec	       | 2304 kb  |
-|          |               | 18 sec	       | 2560 kb  |
-|          |               | 22 sec	       | 2816 kb  |
-|          |               | 26 sec	       | 3072 kb  |
-|          |               | 31 sec	       | 3328 kb  |
-|          |               | 36 sec	       | 3584 kb  |
-|          |               | 42 sec	       | 3840 kb  |
-|          |               | 47 sec        | 4096 kb  |
+| user:    | 1m 53.89s     | 0 sec	       | 256 kb   |
+| sys:     | 0m 0.05s      | 1 sec		   | 512 kb   |
+| total:   | 1m 54.54      | 3 sec	       | 768 kb   |
+| cpu:     | 99%           | 6 sec	       | 1024 kb  |
+| max mem: | 47852 KB      | 10 sec	       | 1280 kb  |
+|          |               | 15 sec	       | 1536 kb  |
+|          |               | 21 sec	       | 1792 kb  |
+|          |               | 27 sec	       | 2048 kb  |
+|          |               | 35 sec	       | 2304 kb  |
+|          |               | 43 sec	       | 2560 kb  |
+|          |               | 52 sec	       | 2816 kb  |
+|          |               | 62 sec	       | 3072 kb  |
+|          |               | 74 sec	       | 3328 kb  |
+|          |               | 86 sec	       | 3584 kb  |
+|          |               | 99 sec	       | 3840 kb  |
+|          |               | 113 sec       | 4096 kb  |
 
 |          | JavaScript (Node 10.4.0) | exec.time.sec | str.size |
 |----------|--------------------------|---------------|----------|
