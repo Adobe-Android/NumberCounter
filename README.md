@@ -130,11 +130,11 @@ I thought this would be a good addition as the benchmarks were severely lacking 
 
 |          | Java (openjdk-11.0.1) |
 |----------|-----------------|
-| user:    | 0m 2.28s        |
-| sys:     | 0m 0.12s        |
-| total:   | 0m 94s          |
-| cpu:     | 254%            |
-| max mem: | 95896 KB        |
+| user:    | 0m 0.16s        |
+| sys:     | 0m 0.02s        |
+| total:   | 0m 10s          |
+| cpu:     | 173%            |
+| max mem: | 49792 KB        |
 
 ## DataStruct
 A collection of small data stucture based benchmarks. These data structures are being tested at extremely large sizes to help separate the differences between them. You won't be able to see the difference between something like an Array and an ArrayList in much smaller programs. More coming soon (C++ Arrays and Vectors sound good). 
