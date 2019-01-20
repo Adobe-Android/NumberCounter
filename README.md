@@ -1,18 +1,22 @@
 # Lang-Benchmark
 
 ### What is it?
-This is a repository where I (and possibly others) will be writing small programs and pushing the most basic programming constructs to compare a number of languages.
+This is a repository where I (and possibly others) will be writing small programs to compare a limited number of languages.
 
 I think this is a good reference point even if it holds little practical value and doesn't do enough to serve as a real benchmark.
 
 ### Hardware/OS:
-- All tests are run on an **AMD Ryzen 7 1700 at 3.6GHz.**
-- The OS is **Ubuntu 18.04.**
+- All tests are run on an **Intel® Core™ i5-4200U at 1.60GHz.**
+- The OS is **Fedora 29.**
+- C and C++ code is compiled using the **-0s optimization.**
+- Rust code is compiled using **cargo build --release.**
 
 ### How do I read this chart?
-All benchmark times are measured with the zsh time command.
+All benchmark times are measured with the GNU time command.
 
-I chose this version for its added capabilities and used it across all tests.
+I chose this version for its capabilities and used it across all tests.
+
+`command time --format "%U user %S system %E total %P CPU %K KB avg mem (shared & unshared) %M KB max mem" ./example`
 
 - Total is wall clock time - time from start to finish of the call. This is all time including time used by other processes and time the process spends blocked (for example if it is waiting for I/O to complete).
 
@@ -22,49 +26,6 @@ I chose this version for its added capabilities and used it across all tests.
 
 *Reference: https://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1* 
 
-## NumberCounter
-Each program will be a simple loop counting to 10,000,000.
-
-### Why?
-I chose ten million as it was a large enough number to help separate the difference between each programming language implementation without being so large that any one language took very long.
-
-**The C++ version is compiled with the -0s optimization.**
-
-|          | C++ (GCC 7.3.0) | Rust (1.27.0) |
-|----------|-----------------|:-------------:|
-| user:    | 0m 2.61s        | 0m 3.86s      |
-| sys:     | 0m 11.87s       | 0m 12.14s     |
-| total:   | 0m 30.597       | 0m 30.785     |
-| cpu:     | 48%             | 51%           |
-| max mem: | 3 MB            | 3 MB          |
-
-|          | C# (.NET Core 2.1.302) | Java (10.0.1) | Go (1.10.1) |
-|----------|------------------------|:-------------:|:-----------:|
-| user:    | 0m 8.77s               | 0m 8.61s      | 0m 4.60s    |
-| sys:     | 0m 14.46s              | 0m 23.80s     | 0m 14.03s   |
-| total:   | 0m 37.268s             | 0m 46.361s    | 0m 33.895s  |
-| cpu:     | 62%                    | 69%           | 54%         |
-| max mem: | 100 MB                 | 192 MB        | 7 MB        |
-
-|          | JavaScript (Node 10.4.0) | PHP (7.2.5) |
-|----------|--------------------------|:-----------:|
-| user:    | 1m 29.07s                | 0m 3.79s    |
-| sys:     | 0m 17.69s                | 0m 29.89s   |
-| total:   | 1m 27.24s                | 0m 47.842s  |
-| cpu:     | 122%                     | 70%         |
-| max mem: | 1530 MB                  | 16 MB       |
-
-|          | Python (CPython 3.6.5) | Python (PyPy3 5.8.0-beta0) |
-|----------|------------------------|:--------------------------:|
-| user:    | 0m 25.20s              | 0m 11.89s                  |
-| sys:     | 0m 17.12s              | 0m 15.07s                  |
-| total:   | 0m 55.777s             | 0m 41.101s                 |
-| cpu:     | 75%                    | 65%                        |
-| max mem: | 9 MB                   | 61 MB                      |
-
-### Additional Notes:
-The benchmarks have been updated to the latest version of PyPy3 I can currently get on Ubuntu 18.04 (through snap packages). Unfortunately, getting a modern version of Pypy3 on Ubuntu has been more of an annoyance than expected. I'll determine what the best approach should be. PHP may be removed in the future as it never really stood out in benchmarks.
-
 ## Strbench
 I actually had a lot of trouble coming up with a string benchmark that ran long enough for a good comparison. I was lucky enough to find a fantastic one.
 If the original author would like to collaborate with me to update all or most of his old examples, I would be happy to.
@@ -72,9 +33,7 @@ If the original author would like to collaborate with me to update all or most o
 *Reference: https://raid6.com.au/~onlyjob/posts/arena/*
 
 ### Why?
-Strings are manipulated extremely often and this is a fantastic example with a lot of data and a long enough run-time to present more accurate results. Pypy benchmarks can be expected in the future. I also opted to use StringBuilder to speed up the Java implementation.
-
-**The C++ version is compiled with the -0s optimization.**
+Strings are manipulated extremely often and this is a fantastic example with a lot of data and a long enough run-time to present more accurate results. I opted to use StringBuilder to speed up the Java implementation and will do the same for the upcoming C# implementation as strings are immutable in both languages.
 
 |          | C++ (GCC 7.3.0) | exec.time.sec | str.size |
 |----------|-----------------|---------------|----------|
@@ -156,12 +115,10 @@ Strings are manipulated extremely often and this is a fantastic example with a l
 This is a program that calculates all values divisible by 3 or 5 that are less than 1 million. If they are, it then adds them to a total number and outputs the result.
 I got inspiration for this test at project euler.
 
-*Reference: https://projecteuler.net/*
+*Reference: https://projecteuler.net/problem=1*
 
 ### Why?
-I thought this would be a good variation on my NumberCounter test with more real logic happening. I also felt that the benchmarks were severely lacking some mathematical computation and it presents some fun optimization opportunities.
-
-**The C++ version is compiled with the -0s optimization.**
+I thought this would be a good addition as the benchmarks were severely lacking some mathematical computation and it presents some fun optimization opportunities.
 
 |          | C++ (GCC 7.3.0) |
 |----------|-----------------|
