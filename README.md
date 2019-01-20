@@ -112,29 +112,29 @@ Strings are manipulated extremely often and this is a fantastic example with a l
 |          |                        | 576 sec       | 4096 kb  |
 
 ## SumCalc
-This is a program that calculates all values divisible by 3 or 5 that are less than 1 million. If they are, it then adds them to a total number and outputs the result.
+This is a program that calculates all values divisible by 3 or 5 that are less than 100 million. If they are, it then adds them to a total number and outputs the result.
 I got inspiration for this test at project euler.
 
 *Reference: https://projecteuler.net/problem=1*
 
 ### Why?
-I thought this would be a good addition as the benchmarks were severely lacking some mathematical computation and it presents some fun optimization opportunities.
+I thought this would be a good addition as the benchmarks were severely lacking some mathematical computation and it presents some fun optimization opportunities. It should be noted that memory usage is so high here because the program is storing so many items in a collection.
 
 |          | C++ (GCC 8.2.1) |
 |----------|-----------------|
-| user:    | 0m 0.01s        |
-| sys:     | 0m 0.00s        |
-| total:   | 0m 2s           |
-| cpu:     | 95%             |
-| max mem: | 4804 KB         |
+| user:    | 0m 0.76s        |
+| sys:     | 0m 0.17s        |
+| total:   | 0m 0.94s        |
+| cpu:     | 99%             |
+| max mem: | 264964 KB       |
 
 |          | Java (openjdk-11.0.1) |
-|----------|-----------------|
-| user:    | 0m 0.16s        |
-| sys:     | 0m 0.02s        |
-| total:   | 0m 10s          |
-| cpu:     | 173%            |
-| max mem: | 49792 KB        |
+|----------|-----------------------|
+| user:    | 0m 11.80s             |
+| sys:     | 0m 0.67s              |
+| total:   | 0m 05.14s             |
+| cpu:     | 242%                  |
+| max mem: | 1456444 KB            |
 
 ## DataStruct
 A collection of small data stucture based benchmarks. These data structures are being tested at extremely large sizes to help separate the differences between them. You won't be able to see the difference between something like an Array and an ArrayList in much smaller programs. More coming soon (C++ Arrays and Vectors sound good). 

@@ -6,9 +6,9 @@ import java.lang.System;
 public class App {
     public static void main(String[] args) {
         int i;
-        int IntSum = 0;
+        long IntSum = 0;
         List<Integer> integerList = new ArrayList<>();
-        for (i = 1; i < 1000000; i++) {
+        for (i = 1; i < 100000000; i++) {
             if (i % 3 == 0 || i % 5 == 0) {
                 integerList.add(i);
             }
