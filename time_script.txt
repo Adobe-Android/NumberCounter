@@ -1,0 +1,1 @@
+command time --format "%U user %S system %E total %P CPU %K KB avg mem (shared & unshared) %M KB max mem"

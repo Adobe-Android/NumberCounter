@@ -1,3 +1,0 @@
-/home/vm/workspace/lang-benchmark/NumberCounter/C++/build/CMakeFiles/rebuild_cache.dir
-/home/vm/workspace/lang-benchmark/NumberCounter/C++/build/CMakeFiles/NumberCounter.dir
-/home/vm/workspace/lang-benchmark/NumberCounter/C++/build/CMakeFiles/edit_cache.dir
