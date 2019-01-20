@@ -39,7 +39,7 @@ Strings are manipulated extremely often and this is a fantastic example with a l
 |----------|-----------------|---------------|----------|
 | user:    | 0m 27.31s       | 0 sec	     | 256 kb   |
 | sys:     | 0m 0.00s        | 0 sec		 | 512 kb   |
-| total:   | 0m 27.53        | 0 sec		 | 768 kb   |
+| total:   | 0m 27.53s       | 0 sec		 | 768 kb   |
 | cpu:     | 99%             | 1 sec		 | 1024 kb  |
 | max mem: | 10752 KB        | 1 sec	     | 1280 kb  |
 |          |                 | 2 sec	     | 1536 kb  |
@@ -55,61 +55,61 @@ Strings are manipulated extremely often and this is a fantastic example with a l
 |          |                 | 27 sec	     | 4096 kb  |
 
 |          | Java (openjdk-11.0.1) | exec.time.sec | str.size |
-|----------|---------------|---------------|----------|
-| user:    | 1m 53.89s     | 0 sec	       | 256 kb   |
-| sys:     | 0m 0.05s      | 1 sec		   | 512 kb   |
-| total:   | 1m 54.54      | 3 sec	       | 768 kb   |
-| cpu:     | 99%           | 6 sec	       | 1024 kb  |
-| max mem: | 47852 KB      | 10 sec	       | 1280 kb  |
-|          |               | 15 sec	       | 1536 kb  |
-|          |               | 21 sec	       | 1792 kb  |
-|          |               | 27 sec	       | 2048 kb  |
-|          |               | 35 sec	       | 2304 kb  |
-|          |               | 43 sec	       | 2560 kb  |
-|          |               | 52 sec	       | 2816 kb  |
-|          |               | 62 sec	       | 3072 kb  |
-|          |               | 74 sec	       | 3328 kb  |
-|          |               | 86 sec	       | 3584 kb  |
-|          |               | 99 sec	       | 3840 kb  |
-|          |               | 113 sec       | 4096 kb  |
+|----------|-----------------------|---------------|----------|
+| user:    | 1m 53.89s             | 0 sec	       | 256 kb   |
+| sys:     | 0m 0.05s              | 1 sec		   | 512 kb   |
+| total:   | 1m 54.54s             | 3 sec	       | 768 kb   |
+| cpu:     | 99%                   | 6 sec	       | 1024 kb  |
+| max mem: | 47852 KB              | 10 sec	       | 1280 kb  |
+|          |                       | 15 sec	       | 1536 kb  |
+|          |                       | 21 sec	       | 1792 kb  |
+|          |                       | 27 sec	       | 2048 kb  |
+|          |                       | 35 sec	       | 2304 kb  |
+|          |                       | 43 sec	       | 2560 kb  |
+|          |                       | 52 sec	       | 2816 kb  |
+|          |                       | 62 sec	       | 3072 kb  |
+|          |                       | 74 sec	       | 3328 kb  |
+|          |                       | 86 sec	       | 3584 kb  |
+|          |                       | 99 sec	       | 3840 kb  |
+|          |                       | 113 sec       | 4096 kb  |
 
-|          | JavaScript (Node 10.4.0) | exec.time.sec | str.size |
-|----------|--------------------------|---------------|----------|
-| user:    | 2m 52.49s                | 0 sec	      | 256 kb   |
-| sys:     | 3m 32.53s                | 1 sec		  | 512 kb   |
-| total:   | 3m 51.28                 | 5 sec		  | 768 kb   |
-| cpu:     | 166%                     | 11 sec		  | 1024 kb  |
-| max mem: | 134 MB                   | 18 sec	      | 1280 kb  |
-|          |                          | 27 sec	      | 1536 kb  |
-|          |                          | 38 sec	 	  | 1792 kb  |
-|          |                          | 51 sec	      | 2048 kb  |
-|          |                          | 65 sec	      | 2304 kb  |
-|          |                          | 81 sec	      | 2560 kb  |
-|          |                          | 99 sec	      | 2816 kb  |
-|          |                          | 118 sec	      | 3072 kb  |
-|          |                          | 140 sec	      | 3328 kb  |
-|          |                          | 163 sec	      | 3584 kb  |
-|          |                          | 188 sec	      | 3840 kb  |
-|          |                          | 215 sec       | 4096 kb  |
+|          | JavaScript (Node 10.15.0) | exec.time.sec | str.size |
+|----------|---------------------------|---------------|----------|
+| user:    | 4m 53.40s                 | 0 sec         | 256 kb   |
+| sys:     | 4m 42.29s                 | 2 sec   	   | 512 kb   |
+| total:   | 7m 03.93s                 | 9 sec   	   | 768 kb   |
+| cpu:     | 135%                      | 19 sec   	   | 1024 kb  |
+| max mem: | 129308 KB                 | 33 sec        | 1280 kb  |
+|          |                           | 50 sec        | 1536 kb  |
+|          |                           | 70 sec    	   | 1792 kb  |
+|          |                           | 94 sec        | 2048 kb  |
+|          |                           | 121 sec       | 2304 kb  |
+|          |                           | 153 sec       | 2560 kb  |
+|          |                           | 188 sec       | 2816 kb  |
+|          |                           | 227 sec       | 3072 kb  |
+|          |                           | 270 sec       | 3328 kb  |
+|          |                           | 317 sec       | 3584 kb  |
+|          |                           | 367 sec       | 3840 kb  |
+|          |                           | 420 sec       | 4096 kb  |
 
-|          | Python (CPython 3.6.5) | exec.time.sec | str.size |
+|          | Python (CPython 3.7.2) | exec.time.sec | str.size |
 |----------|------------------------|---------------|----------|
-| user:    | 6m 17.7s               | 1 sec	        | 256 kb   |
-| sys:     | 2m 1.45s               | 6 sec		    | 512 kb   |
-| total:   | 8m 19.26               | 14 sec	    | 768 kb   |
-| cpu:     | 99%                    | 27 sec	    | 1024 kb  |
-| max mem: | 25 MB                  | 44 sec	    | 1280 kb  |
-|          |                        | 64 sec	    | 1536 kb  |
-|          |                        | 88 sec	    | 1792 kb  |
-|          |                        | 117 sec	    | 2048 kb  |
-|          |                        | 149 sec	    | 2304 kb  |
-|          |                        | 186 sec	    | 2560 kb  |
-|          |                        | 227 sec	    | 2816 kb  |
-|          |                        | 272 sec	    | 3072 kb  |
-|          |                        | 322 sec	    | 3328 kb  |
-|          |                        | 375 sec	    | 3584 kb  |
-|          |                        | 433 sec	    | 3840 kb  |
-|          |                        | 495 sec       | 4096 kb  |
+| user:    | 6m 17.26s              | 1 sec	        | 256 kb   |
+| sys:     | 3m 19.33s              | 6 sec		    | 512 kb   |
+| total:   | 9m 41.32s              | 14 sec	    | 768 kb   |
+| cpu:     | 99%                    | 28 sec	    | 1024 kb  |
+| max mem: | 25440 KB               | 45 sec	    | 1280 kb  |
+|          |                        | 68 sec	    | 1536 kb  |
+|          |                        | 96 sec	    | 1792 kb  |
+|          |                        | 129 sec	    | 2048 kb  |
+|          |                        | 166 sec	    | 2304 kb  |
+|          |                        | 209 sec	    | 2560 kb  |
+|          |                        | 257 sec	    | 2816 kb  |
+|          |                        | 311 sec	    | 3072 kb  |
+|          |                        | 370 sec	    | 3328 kb  |
+|          |                        | 434 sec	    | 3584 kb  |
+|          |                        | 502 sec	    | 3840 kb  |
+|          |                        | 576 sec       | 4096 kb  |
 
 ## SumCalc
 This is a program that calculates all values divisible by 3 or 5 that are less than 1 million. If they are, it then adds them to a total number and outputs the result.

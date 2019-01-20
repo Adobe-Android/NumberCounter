@@ -4,7 +4,6 @@ import sys
 
 str = "abcdefgh" + "efghefgh"
 iterator_max = 1024 / len(str) * 1024 * 4
-# 4mb
 
 start_time = time.time()
 print("exec.time.sec\tstr.size")
