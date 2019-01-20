@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -Os  -rdynamic CMakeFiles/SumCalc.dir/main.cpp.o  -o SumCalc 

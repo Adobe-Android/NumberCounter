@@ -120,13 +120,21 @@ I got inspiration for this test at project euler.
 ### Why?
 I thought this would be a good addition as the benchmarks were severely lacking some mathematical computation and it presents some fun optimization opportunities.
 
-|          | C++ (GCC 7.3.0) |
+|          | C++ (GCC 8.2.1) |
 |----------|-----------------|
-| user:    | 0m 0.17s        |
-| sys:     | 0m 0.58s        |
-| total:   | 0m 1.679        |
-| cpu:     | 44%             |
-| max mem: | 4 MB            |
+| user:    | 0m 0.01s        |
+| sys:     | 0m 0.00s        |
+| total:   | 0m 2s           |
+| cpu:     | 95%             |
+| max mem: | 4804 KB         |
+
+|          | Java (openjdk-11.0.1) |
+|----------|-----------------|
+| user:    | 0m 2.28s        |
+| sys:     | 0m 0.12s        |
+| total:   | 0m 94s          |
+| cpu:     | 254%            |
+| max mem: | 95896 KB        |
 
 ## DataStruct
 A collection of small data stucture based benchmarks. These data structures are being tested at extremely large sizes to help separate the differences between them. You won't be able to see the difference between something like an Array and an ArrayList in much smaller programs. More coming soon (C++ Arrays and Vectors sound good). 
