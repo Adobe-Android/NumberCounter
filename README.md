@@ -9,7 +9,15 @@ I think this is a good reference point even if it holds little practical value a
 - All tests are run on an **Intel® Core™ i5-4200U at 1.60GHz.**
 - The OS is **Fedora 29.**
 - C and C++ code is compiled using the **-0s optimization.**
-- Rust code (*coming soon*) is compiled using **cargo build --release.**
+- Rust code (*possibly coming soon*) is compiled using **cargo build --release.**
+
+### Supported Programming Languages:
+- C/C++
+- Java
+- C#
+- JavaScript
+- Python
+- Rust (maybe)
 
 ### How do I read this chart?
 All benchmark times are measured with the GNU time command.
