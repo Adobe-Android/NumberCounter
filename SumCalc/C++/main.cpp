@@ -6,20 +6,14 @@ using std::vector;
 
 int main()
 {
-    int i;
-    long IntSum = 0;
-    vector<int> sumVector;
-    for (i = 1; i < 100000000; i++)
-    {
-        if (i % 3 == 0 || i % 5 == 0)
-        {
-            sumVector.push_back({i});
-        }
-    }
-    for (const int &j : sumVector)
-    {
-        IntSum += j;
-    }
-    cout << IntSum << '\n';
-    return 0;
+	long int_sum = 0; vector<int> sum_vector;
+
+	for (int i = 1; i < 100'000'000; i++)
+		if (i % 3 == 0 || i % 5 == 0)
+			sum_vector.push_back({ i });
+
+	for (const int& j : sum_vector)
+		int_sum += j;
+
+	cout << int_sum << '\n';
 }
