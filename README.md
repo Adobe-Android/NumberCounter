@@ -125,23 +125,23 @@ Strings are manipulated extremely often and this is a fantastic example with a l
 Just your typical BubbleSort.
 
 ### Why?
-I thought sorting algorithms would make for a good comparison and where better to start than the classic bubble sort.
+I thought sorting algorithms would make for a good comparison. Where better to start than the classic bubble sort?
 
 |          | C++ (GCC 8.3.0) |
 |----------|-----------------|
 | user:    | 0m 0.00s        |
 | sys:     | 0m 0.00s        |
-| total:   | 0m 00.00s       |
+| total:   | 0m 00.02s       |
 | cpu:     | 0%              |
 | max mem: | 1500 KB         |
 
 |          | C# (.NET Core Runtime 2.2.5) |
 |----------|------------------------------|
-| user:    | 0m 0.07s                     |
-| sys:     | 0m 0.06s                     |
-| total:   | 0m 00.13s                    |
-| cpu:     | 104%                         |
-| max mem: | 19080 KB                     |
+| user:    | 0m 0.17s                     |
+| sys:     | 0m 0.10s                     |
+| total:   | 0m 00.30s                    |
+| cpu:     | 92%                          |
+| max mem: | 19084 KB                     |
 
 ## SumCalc
 This is a program that calculates all values divisible by 3 or 5 that are less than 100 million. If they are, it then adds them to a total number and outputs the result.
