@@ -5,7 +5,7 @@ This is a repository where I (and possibly others) will be writing small program
 
 I think this is a good reference point even if it holds little practical value and doesn't do enough to serve as a real benchmark.
 
-### Hardware/OS:
+### Hardware and OS:
 - All tests are run on an **Intel® Core™ i7-8650U at 1.90 GHz base and 4.20 GHz max turbo**
 - The OS is **Pengwin 0.1-182 (WSL).**
 - C++ code is compiled using the **-0s optimization.**
