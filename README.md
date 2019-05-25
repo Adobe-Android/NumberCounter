@@ -8,16 +8,18 @@ I think this is a good reference point even if it holds little practical value a
 ### Hardware and OS:
 - All tests are run on an **Intel® Core™ i7-8650U at 1.90 GHz base and 4.20 GHz max turbo**
 - The OS is **Pengwin 0.1-182 (WSL).**
-- C++ code is compiled using the **-0s optimization.**
-- Rust code (*possibly coming soon*) is compiled using **cargo build --release.**
 
 ### Supported Programming Languages:
 - C++
+  - compiled with **g++ 8.3.0** using **-0s**
 - C#
+  - compiled with **dotnet 2.2.300** using **dotnet build -c Release**
+  - run using **dotnet BubbleSort.dll**
 - Java
 - JavaScript
 - Python
 - Rust (*possibly coming soon*)
+  - compiled using **cargo build --release.**
 
 ### How do I read this chart?
 All benchmark times are measured with the GNU time command.
