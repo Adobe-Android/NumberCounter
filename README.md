@@ -13,7 +13,7 @@ I think this is a good reference point even if it holds little practical value a
 - C++
   - compiled with **g++ 8.3.0** using **-0s**
 - C#
-  - compiled with **.NET Core 2.2.300** using **dotnet build -c Release**
+  - compiled with **.NET Core SDK 2.2.300 and .NET Core Runtime 2.2.5** using **dotnet build -c Release**
   - run using **dotnet BubbleSort.dll**
 - Java
 - JavaScript
@@ -135,13 +135,13 @@ I thought sorting algorithms would make for a good comparison and where better t
 | cpu:     | 0%              |
 | max mem: | 1500 KB         |
 
-|          | C# (.NET Core 2.2.300) |
-|----------|------------------------|
-| user:    | 0m 0.07s               |
-| sys:     | 0m 0.06s               |
-| total:   | 0m 00.13s              |
-| cpu:     | 104%                   |
-| max mem: | 19080 KB               |
+|          | C# (.NET Core Runtime 2.2.5) |
+|----------|------------------------------|
+| user:    | 0m 0.07s                     |
+| sys:     | 0m 0.06s                     |
+| total:   | 0m 00.13s                    |
+| cpu:     | 104%                         |
+| max mem: | 19080 KB                     |
 
 ## SumCalc
 This is a program that calculates all values divisible by 3 or 5 that are less than 100 million. If they are, it then adds them to a total number and outputs the result.
