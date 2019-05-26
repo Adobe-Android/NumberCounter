@@ -16,6 +16,8 @@ I think this is a good reference point even if it holds little practical value a
   - compiled with **.NET Core SDK 2.2.300 and .NET Core Runtime 2.2.5** using **dotnet build -c Release**
   - run using **dotnet BubbleSort.dll**
 - Java
+  - compiled with **javac 12.0.1** using **maven package**
+  - run using **java -cp target/Strbench-1.0-SNAPSHOT.jar tech.dbrown.App**
 - JavaScript
 - Python
 - Rust (*possibly coming soon*)
