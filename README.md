@@ -83,24 +83,24 @@ Strings are manipulated extremely often and this is a fantastic example with a l
 |          |                       | 99 sec	       | 3840 kb  |
 |          |                       | 113 sec       | 4096 kb  |
 
-|          | JavaScript (Node 10.15.0) | exec.time.sec | str.size |
+|          | JavaScript (Node 12.3.1)  | exec.time.sec | str.size |
 |----------|---------------------------|---------------|----------|
-| user:    | 4m 53.40s                 | 0 sec         | 256 kb   |
-| sys:     | 4m 42.29s                 | 2 sec   	   | 512 kb   |
-| total:   | 7m 03.93s                 | 9 sec   	   | 768 kb   |
-| cpu:     | 135%                      | 19 sec   	   | 1024 kb  |
-| max mem: | 129308 KB                 | 33 sec        | 1280 kb  |
-|          |                           | 50 sec        | 1536 kb  |
-|          |                           | 70 sec    	   | 1792 kb  |
-|          |                           | 94 sec        | 2048 kb  |
-|          |                           | 121 sec       | 2304 kb  |
-|          |                           | 153 sec       | 2560 kb  |
-|          |                           | 188 sec       | 2816 kb  |
-|          |                           | 227 sec       | 3072 kb  |
-|          |                           | 270 sec       | 3328 kb  |
-|          |                           | 317 sec       | 3584 kb  |
-|          |                           | 367 sec       | 3840 kb  |
-|          |                           | 420 sec       | 4096 kb  |
+| user:    | 1m 50.85s                 | 0 sec         | 256 kb   |
+| sys:     | 7m 27.15s                 | 6 sec    	   | 512 kb   |
+| total:   | 9m 03.98s                 | 17 sec    	   | 768 kb   |
+| cpu:     | 102%                      | 31 sec   	   | 1024 kb  |
+| max mem: | 177080 KB                 | 50 sec        | 1280 kb  |
+|          |                           | 73 sec        | 1536 kb  |
+|          |                           | 100 sec   	   | 1792 kb  |
+|          |                           | 132 sec       | 2048 kb  |
+|          |                           | 167 sec       | 2304 kb  |
+|          |                           | 207 sec       | 2560 kb  |
+|          |                           | 251 sec       | 2816 kb  |
+|          |                           | 300 sec       | 3072 kb  |
+|          |                           | 353 sec       | 3328 kb  |
+|          |                           | 410 sec       | 3584 kb  |
+|          |                           | 473 sec       | 3840 kb  |
+|          |                           | 539 sec       | 4096 kb  |
 
 |          | Python (CPython 3.7.2) | exec.time.sec | str.size |
 |----------|------------------------|---------------|----------|
