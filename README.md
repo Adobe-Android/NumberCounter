@@ -6,7 +6,7 @@ This is a repository where I (and possibly others) will be writing small program
 I think this is a good reference point even if it holds little practical value and doesn't do enough to serve as a real benchmark.
 
 ### Hardware and OS:
-- All tests are run on an **Intel® Core™ i7-8650U at 1.90 GHz base and 4.20 GHz max turbo**
+- All tests are run on an **AMD Ryzen 7 1700**
 - The OS is **Pengwin 0.1-182 (WSL).**
 
 ### Supported Programming Languages:
@@ -47,43 +47,43 @@ If the original author would like to collaborate with me to update all or most o
 ### Why?
 Strings are manipulated extremely often and this is a fantastic example with a lot of data and a long enough run-time to present more accurate results. I opted to use StringBuilder to speed up the Java implementation and will do the same for the upcoming C# implementation as strings are immutable in both languages.
 
-|          | C++ (GCC 8.2.1) | exec.time.sec | str.size |
+|          | C++ (GCC 8.3.0) | exec.time.sec | str.size |
 |----------|-----------------|---------------|----------|
-| user:    | 0m 27.31s       | 0 sec	     | 256 kb   |
-| sys:     | 0m 0.00s        | 0 sec		 | 512 kb   |
-| total:   | 0m 27.53s       | 0 sec		 | 768 kb   |
+| user:    | 0m 10.25s       | 0 sec	     | 256 kb   |
+| sys:     | 0m 0.01s        | 1 sec		 | 512 kb   |
+| total:   | 0m 10.27s       | 1 sec		 | 768 kb   |
 | cpu:     | 99%             | 1 sec		 | 1024 kb  |
-| max mem: | 10752 KB        | 1 sec	     | 1280 kb  |
+| max mem: | 9300 KB         | 1 sec	     | 1280 kb  |
 |          |                 | 2 sec	     | 1536 kb  |
-|          |                 | 3 sec		 | 1792 kb  |
-|          |                 | 4 sec	     | 2048 kb  |
-|          |                 | 5 sec	     | 2304 kb  |
-|          |                 | 7 sec	     | 2560 kb  |
-|          |                 | 9 sec	     | 2816 kb  |
-|          |                 | 11 sec	     | 3072 kb  |
-|          |                 | 14 sec	     | 3328 kb  |
-|          |                 | 18 sec	     | 3584 kb  |
-|          |                 | 22 sec	     | 3840 kb  |
-|          |                 | 27 sec	     | 4096 kb  |
+|          |                 | 2 sec		 | 1792 kb  |
+|          |                 | 3 sec	     | 2048 kb  |
+|          |                 | 4 sec	     | 2304 kb  |
+|          |                 | 4 sec	     | 2560 kb  |
+|          |                 | 5 sec	     | 2816 kb  |
+|          |                 | 6 sec	     | 3072 kb  |
+|          |                 | 7 sec	     | 3328 kb  |
+|          |                 | 8 sec	     | 3584 kb  |
+|          |                 | 9 sec	     | 3840 kb  |
+|          |                 | 11 sec	     | 4096 kb  |
 
-|          | Java (openjdk-11.0.1) | exec.time.sec | str.size |
+|          | Java (12.0.1-zulu)    | exec.time.sec | str.size |
 |----------|-----------------------|---------------|----------|
-| user:    | 1m 53.89s             | 0 sec	       | 256 kb   |
-| sys:     | 0m 0.05s              | 1 sec		   | 512 kb   |
-| total:   | 1m 54.54s             | 3 sec	       | 768 kb   |
-| cpu:     | 99%                   | 6 sec	       | 1024 kb  |
-| max mem: | 47852 KB              | 10 sec	       | 1280 kb  |
-|          |                       | 15 sec	       | 1536 kb  |
-|          |                       | 21 sec	       | 1792 kb  |
-|          |                       | 27 sec	       | 2048 kb  |
-|          |                       | 35 sec	       | 2304 kb  |
-|          |                       | 43 sec	       | 2560 kb  |
-|          |                       | 52 sec	       | 2816 kb  |
-|          |                       | 62 sec	       | 3072 kb  |
-|          |                       | 74 sec	       | 3328 kb  |
-|          |                       | 86 sec	       | 3584 kb  |
-|          |                       | 99 sec	       | 3840 kb  |
-|          |                       | 113 sec       | 4096 kb  |
+| user:    | 0m 55.37s             | 0 sec	       | 256 kb   |
+| sys:     | 0m 0.14s              | 0 sec		   | 512 kb   |
+| total:   | 0m 55.22s             | 1 sec	       | 768 kb   |
+| cpu:     | 100%                  | 3 sec	       | 1024 kb  |
+| max mem: | 44096 KB              | 5 sec	       | 1280 kb  |
+|          |                       | 7 sec	       | 1536 kb  |
+|          |                       | 10 sec	       | 1792 kb  |
+|          |                       | 13 sec	       | 2048 kb  |
+|          |                       | 17 sec	       | 2304 kb  |
+|          |                       | 21 sec	       | 2560 kb  |
+|          |                       | 25 sec	       | 2816 kb  |
+|          |                       | 30 sec	       | 3072 kb  |
+|          |                       | 36 sec	       | 3328 kb  |
+|          |                       | 41 sec	       | 3584 kb  |
+|          |                       | 48 sec	       | 3840 kb  |
+|          |                       | 54 sec        | 4096 kb  |
 
 |          | JavaScript (Node 12.3.1)  | exec.time.sec | str.size |
 |----------|---------------------------|---------------|----------|
@@ -104,24 +104,24 @@ Strings are manipulated extremely often and this is a fantastic example with a l
 |          |                           | 473 sec       | 3840 kb  |
 |          |                           | 539 sec       | 4096 kb  |
 
-|          | Python (CPython 3.7.2) | exec.time.sec | str.size |
+|          | Python (CPython 3.7.3) | exec.time.sec | str.size |
 |----------|------------------------|---------------|----------|
-| user:    | 6m 17.26s              | 1 sec	        | 256 kb   |
-| sys:     | 3m 19.33s              | 6 sec		    | 512 kb   |
-| total:   | 9m 41.32s              | 14 sec	    | 768 kb   |
-| cpu:     | 99%                    | 28 sec	    | 1024 kb  |
-| max mem: | 25440 KB               | 45 sec	    | 1280 kb  |
-|          |                        | 68 sec	    | 1536 kb  |
-|          |                        | 96 sec	    | 1792 kb  |
-|          |                        | 129 sec	    | 2048 kb  |
-|          |                        | 166 sec	    | 2304 kb  |
-|          |                        | 209 sec	    | 2560 kb  |
-|          |                        | 257 sec	    | 2816 kb  |
-|          |                        | 311 sec	    | 3072 kb  |
-|          |                        | 370 sec	    | 3328 kb  |
-|          |                        | 434 sec	    | 3584 kb  |
-|          |                        | 502 sec	    | 3840 kb  |
-|          |                        | 576 sec       | 4096 kb  |
+| user:    | 5m 07.17s              | 2 sec	        | 256 kb   |
+| sys:     | 6m 30.89s              | 9 sec		    | 512 kb   |
+| total:   | 11m 38.24s             | 20 sec	    | 768 kb   |
+| cpu:     | 99%                    | 37 sec	    | 1024 kb  |
+| max mem: | 22968 KB               | 59 sec	    | 1280 kb  |
+|          |                        | 86 sec	    | 1536 kb  |
+|          |                        | 119 sec	    | 1792 kb  |
+|          |                        | 158 sec	    | 2048 kb  |
+|          |                        | 204 sec	    | 2304 kb  |
+|          |                        | 256 sec	    | 2560 kb  |
+|          |                        | 314 sec	    | 2816 kb  |
+|          |                        | 378 sec	    | 3072 kb  |
+|          |                        | 447 sec	    | 3328 kb  |
+|          |                        | 523 sec	    | 3584 kb  |
+|          |                        | 605 sec	    | 3840 kb  |
+|          |                        | 692 sec       | 4096 kb  |
 
 ## BubbleSort
 Just your typical BubbleSort.
